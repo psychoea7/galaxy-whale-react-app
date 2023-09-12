@@ -1,0 +1,7 @@
+.banner__container {
+  z-index: -1;
+}
+.banner__container img {
+  width: 100%;
+  height: 70vh;
+}

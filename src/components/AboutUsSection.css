@@ -1,0 +1,15 @@
+.aboutUsSection__image {
+    width: 100%;
+    height: 78.3vh;
+    object-fit: cover;
+    border-radius: 0.3vw;
+}
+
+.aboutUsSection__text {
+    padding: 2.5rem;
+    text-align: justify;
+}
+
+.aboutUsSection__divider {
+    margin-bottom: 1rem !important;
+}

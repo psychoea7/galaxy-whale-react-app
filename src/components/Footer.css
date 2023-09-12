@@ -1,0 +1,13 @@
+.footer__container {
+    margin-top: 4rem;
+}
+
+.footer__quickLink {
+    text-decoration: none !important;
+    color: black !important;
+    /* line-height: 3rem !important; */
+}
+
+.footer__logo {
+    /* width: 100px; */
+}

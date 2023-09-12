@@ -1,0 +1,68 @@
+/* .sidebar {
+  background-color: var(--clr-white);
+  height: 100%;
+} */
+.sidebar img {
+  padding: 2.5rem;
+  margin: 1.5rem auto;
+}
+
+.sidebar .sidebar__icon {
+  color: var(--clr-super-light-blue);
+}
+
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: transparent;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 1;
+  /* animations */
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+.white-background {
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.sidebar__toggler {
+  width: 45px;
+  height: 45px;
+  color: var(--clr-dark-blue) !important;
+}
+.sidebar__toggler:hover {
+  background-color: var(--clr-super-light-blue) !important;
+  color: var(--clr-white) !important;
+}
+.sidebar__header img {
+  width: 150px;
+  height: 100px;
+  /* margin-right: 4rem; */
+}
+.sidebar__linksContainer .sidebar__link {
+  text-decoration: none;
+  color: #000000;
+}
+.content {
+  margin-left: 0;
+  transition: margin-left 0.3s;
+}
+
+.content-with-sidebar {
+  margin-left: 250px;
+  transition: margin-left 0.3s;
+}
+
+.custom-select {
+  border: none !important;
+}
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
