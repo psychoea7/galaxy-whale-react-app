@@ -15,6 +15,8 @@ import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 import ConnectWithoutContactRoundedIcon from "@mui/icons-material/ConnectWithoutContactRounded";
 import Brightness4Icon from "@mui/icons-material/Brightness4"; // Theme switch icon
 import LanguageIcon from "@mui/icons-material/Language"; // Language selector icon
+import BookIcon from '@mui/icons-material/Book';
+import ArtTrackIcon from '@mui/icons-material/ArtTrack';
 import Logo from "../assets/images/Logo.svg";
 import { Link } from "react-router-dom";
 import { Divider } from "@mui/material";
@@ -113,7 +115,7 @@ function Sidebar() {
                 <ListItemIcon>
                   <InfoRoundedIcon className="sidebar__icon" />
                 </ListItemIcon>
-                <ListItemText primary="About us" />
+                <ListItemText primary="About" />
               </ListItem>
             </Link>
             <Link to="/contact-us" className="sidebar__link">
@@ -121,7 +123,23 @@ function Sidebar() {
                 <ListItemIcon>
                   <ConnectWithoutContactRoundedIcon className="sidebar__icon" />
                 </ListItemIcon>
-                <ListItemText primary="Contact us" />
+                <ListItemText primary="Contact" />
+              </ListItem>
+            </Link>
+            <Link to="/portfolio" className="sidebar__link">
+              <ListItem button>
+                <ListItemIcon>
+                  <ArtTrackIcon className="sidebar__icon" />
+                </ListItemIcon>
+                <ListItemText primary="Portfolio" />
+              </ListItem>
+            </Link>
+            <Link to="/contact-us" className="sidebar__link">
+              <ListItem button>
+                <ListItemIcon>
+                  <BookIcon className="sidebar__icon" />
+                </ListItemIcon>
+                <ListItemText primary="Blog" />
               </ListItem>
             </Link>
             {/* Add other links as needed */}
@@ -138,10 +156,14 @@ function Sidebar() {
               <LanguageIcon className="sidebar__icon" />{" "}
               {/* Language selector icon */}
             </ListItemIcon>
-            <label>Language:</label>
-            <Select value={selectedLanguage} onChange={handleLanguageChange}>
+            <label className="sidebar__text">Language:</label>
+            <Select
+              className="sidebar__text"
+              value={selectedLanguage}
+              onChange={handleLanguageChange}
+            >
               <MenuItem value="en">English</MenuItem>
-              <MenuItem value="es">Español</MenuItem>
+              <MenuItem value="ar">Arabic</MenuItem>
               {/* Add more language options */}
             </Select>
           </div>
@@ -154,7 +176,7 @@ function Sidebar() {
               <Brightness4Icon className="sidebar__icon" />{" "}
               {/* Theme switch icon */}
             </ListItemIcon>
-            <label>Dark Mode:</label>
+            <label className="sidebar__text">Light Mode:</label>
             <Switch
               checked={darkMode}
               onChange={toggleDarkMode}

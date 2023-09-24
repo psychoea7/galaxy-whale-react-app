@@ -1,0 +1,22 @@
+.aboutUsScreen__aboutMargin {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}  
+
+.aboutUsScreen__teamContainer {
+    padding: 2rem;
+    background-color: var(--clr-white) !important;
+}
+
+.marginTopForContainer {
+    margin-top: 3rem;
+}
+
+.aboutUsScreen__missionImage {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+}
+.aboutUsScreen__missionButton {
+    background-color: var(--clr-light-blue) !important;
+}

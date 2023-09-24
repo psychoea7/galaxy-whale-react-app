@@ -1,0 +1,20 @@
+.contactUsScreen__container {
+    margin-top: 6rem;
+}
+.contactInfo__container {
+    color: var(--clr-white);
+}
+
+.contactInfo__icon {
+    margin-right: 1rem;
+    color: var(--clr-super-light-blue);
+}
+.contactInfo__divider {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.contactInfo__socialIcon {
+    color: var(--clr-super-light-blue) !important;
+    font-size: 2rem !important;
+}

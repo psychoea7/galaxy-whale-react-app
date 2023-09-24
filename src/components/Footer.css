@@ -1,13 +1,20 @@
 .footer__container {
     margin-top: 4rem;
+    color: var(--clr-white);
 }
 
 .footer__quickLink {
     text-decoration: none !important;
-    color: black !important;
+    color: var(--clr-white) !important;
     /* line-height: 3rem !important; */
 }
 
-.footer__logo {
-    /* width: 100px; */
+.footer__Icon {
+    color: var(--clr-super-light-blue);
 }
+/* ContactUsScreen.css */
+
+  
+  .customSecondaryText {
+    color: var(--clr-light-blue) !important; /* Your custom color for secondary text */
+  }

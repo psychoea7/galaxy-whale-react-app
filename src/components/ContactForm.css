@@ -1,0 +1,33 @@
+.contactForm__container {
+    color: var(--clr-white);
+}
+
+.contactForm__divider {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.contactForm__input {
+    color: var(--clr-white) !important;
+}
+
+.input-label-color-default {
+    color: var(--clr-super-light-blue) !important; /* Change 'your_desired_focused_color' to the color you want for focused state */
+  }
+
+.input-label-color-focus {
+    color: var(--clr-white) !important; /* Change 'your_desired_focused_color' to the color you want for focused state */
+  }
+
+  .customInputUnderline:before {
+    border-bottom: 2px solid var(--clr-super-light-blue) !important; /* Change 'your_desired_color' to the color you want for the underline */
+  }
+
+  .customInputUnderline:after {
+    border-bottom: 2px solid var(--clr-white) !important; /* Change 'your_desired_color' to the color you want for the underline */
+  }
+
+  .contactForm__button {
+    background-color: var(--clr-light-blue) !important;
+    color: var(--clr-white) !important;
+  }

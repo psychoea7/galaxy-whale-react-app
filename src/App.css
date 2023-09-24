@@ -15,4 +15,5 @@
 
 body {
   overflow-x: hidden !important;
+  background-color: var(--clr-dark-blue);
 }

@@ -8,8 +8,10 @@
 .aboutUsSection__text {
     padding: 2.5rem;
     text-align: justify;
+    background-color: var(--clr-white) !important;
 }
 
 .aboutUsSection__divider {
     margin-bottom: 1rem !important;
 }
+

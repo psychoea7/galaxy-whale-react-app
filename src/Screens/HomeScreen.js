@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import ServiceCard from "../components/ServiceCard";
 import AboutUsSection from "../components/AboutUsSection";
 import Footer from "../components/Footer";
-import ResponsiveServiceCard from "../components/ResponsiveServiceCard";
+
 
 function HomeScreen() {
   return (
