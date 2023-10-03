@@ -124,7 +124,7 @@ function Footer() {
                 <Link
                   className="footer__quickLink"
                   component={RouterLink}
-                  to="/contact-us"
+                  to="/blog"
                 >
                   Blog
                 </Link>

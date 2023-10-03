@@ -134,7 +134,7 @@ function Sidebar() {
                 <ListItemText primary="Portfolio" />
               </ListItem>
             </Link>
-            <Link to="/contact-us" className="sidebar__link">
+            <Link to="/blog" className="sidebar__link">
               <ListItem button>
                 <ListItemIcon>
                   <BookIcon className="sidebar__icon" />

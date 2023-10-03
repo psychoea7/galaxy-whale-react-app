@@ -1,0 +1,64 @@
+/* PortfolioItems.css */
+
+/* Styles for portfolio cards in PortfolioItems */
+.portfolio__card {
+  width: 100%;
+  max-width: 400px;
+  margin: 2em auto;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(221, 230, 237, 1) 0%,
+    rgba(82, 109, 130, 1) 35%
+  );
+  border-radius: 0.3vw;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Styles for images inside portfolio cards */
+.portfolio__image {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Styles for the overlay background on portfolio cards */
+.portfolio__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(221, 230, 237, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Styles for the eye icon on portfolio cards */
+.portfolio__card::after {
+  content: "👁";
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: var(--clr-dark-blue);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover styles for portfolio cards */
+.portfolio__card:hover::before,
+.portfolio__card:hover::after {
+  opacity: 1;
+}
+
+/* Styles for link inside portfolio cards */
+.hero-image-container {
+  text-decoration: none !important;
+}

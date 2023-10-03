@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import {
@@ -7,80 +7,136 @@ import {
   Grid,
   Card,
   CardContent,
-  Button,
-  TextField,
-  Select,
-  MenuItem,
-  InputLabel,
   Divider,
+  Modal,
+  IconButton,
 } from "@mui/material";
+import Gallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close"; // Import the close icon
 import "./PortfolioScreen.css"; // You can create a CSS file for additional styling
 import TestImage from "../assets/images/3.png";
 import TestImageTwo from "../assets/images/4.png";
 import TestImageThree from "../assets/images/5.png";
 import TestImageFour from "../assets/images/6.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import PortfolioFilter from "../components/PortfolioFilter";
+import PortfolioItems from "../components/PortfolioItems";
 
 function PortfolioScreen() {
-  // Define your portfolio items (you can replace this with your actual data)
   // Define your portfolio items (you can replace this with your actual data)
   const portfolioItems = [
     {
       title: "Web Design Project 1",
       category: "Web Design",
-      image: TestImage,
+      preview: TestImage, // Add the preview image URL here
+      images: [
+        {
+          original: TestImage,
+          thumbnail: TestImage, // Add the thumbnail image URL here
+          description: "Image 1 Description",
+        },
+        {
+          original: TestImageTwo,
+          thumbnail: TestImageTwo, // Add the thumbnail image URL here
+          description: "Image 2 Description",
+        },
+      ],
       description: "A brief description of the project goes here.",
     },
     {
       title: "Web Development Project 1",
       category: "Web Development",
-      image: TestImageTwo,
+      preview: TestImageTwo, // Add the preview image URL here
+      images: [
+        {
+          original: TestImageTwo,
+          description: "Image 1 Description",
+        },
+      ],
       description: "A brief description of the project goes here.",
     },
     {
       title: "Logo Design Project 1",
       category: "Logo Design",
-      image: TestImageThree,
+      preview: TestImageThree, // Add the preview image URL here
+      images: [
+        {
+          original: TestImageThree,
+          description: "Image 1 Description",
+        },
+      ],
       description: "A brief description of the project goes here.",
     },
     {
       title: "Banner Design Project 1",
       category: "Banner Design",
-      image: TestImageFour,
+      preview: TestImageFour, // Add the preview image URL here
+      images: [
+        {
+          original: TestImageFour,
+          description: "Image 1 Description",
+        },
+      ],
       description: "A brief description of the project goes here.",
     },
     {
       title: "Web Design Project 2",
       category: "Web Design",
-      image: TestImage,
+      preview: TestImage, // Add the preview image URL here
+      images: [
+        {
+          original: TestImage,
+          description: "Image 1 Description",
+        },
+      ],
       description: "A brief description of the project goes here.",
     },
     {
       title: "Web Development Project 2",
       category: "Web Development",
-      image: TestImageTwo,
+      preview: TestImageTwo, // Add the preview image URL here
+      images: [
+        {
+          original: TestImageTwo,
+          description: "Image 1 Description",
+        },
+      ],
       description: "A brief description of the project goes here.",
     },
     {
       title: "Logo Design Project 2",
       category: "Logo Design",
-      image: TestImageThree,
+      preview: TestImageThree, // Add the preview image URL here
+      images: [
+        {
+          original: TestImageThree,
+          description: "Image 1 Description",
+        },
+      ],
       description: "A brief description of the project goes here.",
     },
     {
       title: "Banner Design Project 2",
       category: "Banner Design",
-      image: TestImageFour,
+      preview: TestImageFour, // Add the preview image URL here
+      images: [
+        {
+          original: TestImageFour,
+          description: "Image 1 Description",
+        },
+      ],
       description: "A brief description of the project goes here.",
     },
     // Add more portfolio items as needed
   ];
 
-  const [sortBy, setSortBy] = useState("default"); // Default sorting option
-  const [categoryFilter, setCategoryFilter] = useState("all"); // Default category filter
-  const [searchQuery, setSearchQuery] = useState(""); // Search query
+  const [sortBy, setSortBy] = useState("default");
+  const [categoryFilter, setCategoryFilter] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [images, setImages] = useState([]);
 
   const sortingOptions = [
     { value: "default", label: "Default" },
@@ -97,18 +153,18 @@ function PortfolioScreen() {
     // Add more categories as needed
   ];
 
-  const handleSortChange = (event) => {
-    setSortBy(event.target.value);
+  const handleOpenModal = (itemImages) => {
+    setModalOpen(true);
+    setImages(itemImages); // Use the images from the clicked portfolio item
+  };
+  
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
   };
 
-  const handleCategoryFilterChange = (event) => {
-    setCategoryFilter(event.target.value);
-  };
 
-  const handleSearchInputChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
-
+  // Define filteredAndSortedItems based on sortBy, categoryFilter, and searchQuery
   const filteredAndSortedItems = portfolioItems
     .filter((item) => {
       if (categoryFilter === "all") {
@@ -131,115 +187,58 @@ function PortfolioScreen() {
       }
     });
 
+  const handleSortChange = (event) => {
+    setSortBy(event.target.value);
+  };
+
+  const handleCategoryFilterChange = (event) => {
+    setCategoryFilter(event.target.value);
+  };
+
+  const handleSearchInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
   return (
     <div>
       <Sidebar />
       <Container className="portfolio__container">
-        <div>
-          <h2 className="portfolio__headerText">Portfolio</h2>
-          <Divider className="portfolio__divider" />
-          <Grid className="portfolio__filterOptions" container spacing={3}>
-            <Grid item xs={12} sm={4} md={4}>
-              {" "}
-              {/* 3 columns for medium screens */}
-              <InputLabel
-                className="portfolio__inputLabel"
-                htmlFor="sort-select"
-              >
-                Sort By
-              </InputLabel>
-              <Select
-                className="portfolio__inputLabel"
-                value={sortBy}
-                onChange={handleSortChange}
-                inputProps={{
-                  name: "sort",
-                  id: "sort-select",
-                }}
-              >
-                {sortingOptions.map((option) => (
-                  <MenuItem key={option.value} value={option.value}>
-                    {option.label}
-                  </MenuItem>
-                ))}
-              </Select>
-            </Grid>
-            <Grid item xs={12} sm={4} md={4}>
-              {" "}
-              {/* 3 columns for medium screens */}
-              <InputLabel
-                className="portfolio__inputLabel"
-                htmlFor="category-select"
-              >
-                Category
-              </InputLabel>
-              <Select
-                className="portfolio__inputLabel"
-                value={categoryFilter}
-                onChange={handleCategoryFilterChange}
-                inputProps={{
-                  name: "category",
-                  id: "category-select",
-                }}
-              >
-                {categoryOptions.map((option) => (
-                  <MenuItem key={option.value} value={option.value}>
-                    {option.label}
-                  </MenuItem>
-                ))}
-              </Select>
-            </Grid>
-            <Grid item xs={12} sm={4} md={4}>
-              {" "}
-              {/* 3 columns for medium screens */}
-              <TextField
-                className="portfolio__searchInput"
-                variant="filled"
-                id="search-input"
-                label="Search"
-                value={searchQuery}
-                onChange={handleSearchInputChange}
-                InputProps={{
-                  endAdornment: (
-                    <SearchIcon className="portfolio__searchIcon" />
-                  ),
-                  classes: {
-                    underline: "customInputUnderline",
-                  },
-                  style: { color: "#dde6ed" },
-                }}
-                InputLabelProps={{
-                  classes: {
-                    root: "input-label-color-default", // Add a CSS class for default state
-                    focused: "input-label-color-focus", // Add a CSS class for focused state
-                  },
-                }}
-              />
-            </Grid>
-          </Grid>
-        </div>
-        <Grid container spacing={3}>
-          {filteredAndSortedItems.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <Link className="hero-image-container" to="/">
-                <Card className="portfolio__card">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="portfolio__image"
-                  />
-                  <CardContent>
-                    <Typography variant="h6">{item.title}</Typography>
-                    <Typography variant="subtitle1" color="textSecondary">
-                      {item.category}
-                    </Typography>
-                    <Typography variant="body2">{item.description}</Typography>
-                  </CardContent>
-                </Card>
-              </Link>
-            </Grid>
-          ))}
-        </Grid>
+        <h2 className="portfolio__headerText">Portfolio</h2>
+        <Divider className="portfolio__divider" />
+        <PortfolioFilter
+          sortBy={sortBy}
+          categoryFilter={categoryFilter}
+          searchQuery={searchQuery}
+          handleSortChange={handleSortChange}
+          handleCategoryFilterChange={handleCategoryFilterChange}
+          handleSearchInputChange={handleSearchInputChange}
+          sortingOptions={sortingOptions}
+          categoryOptions={categoryOptions}
+        />
+        <PortfolioItems
+          portfolioItems={portfolioItems}
+          filteredAndSortedItems={filteredAndSortedItems}
+          handleOpenModal={handleOpenModal} 
+        />
+       <Modal open={isModalOpen} onClose={handleCloseModal}>
+          <div className="modal-content">
+            {/* Custom close button */}
+            <div className="close-button-container">
+  <IconButton
+    className="close-button"
+    onClick={handleCloseModal}
+    style={{
+      fontSize: '2rem', // Increase the icon size
+      color: 'white',
+    }}
+  >
+    <CloseIcon />
+  </IconButton>
+</div>
+
+            <Gallery items={images} thumbnailPosition="bottom"  />
+          </div>
+        </Modal>
       </Container>
       <Footer />
     </div>

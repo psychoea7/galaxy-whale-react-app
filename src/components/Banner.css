@@ -1,9 +1,18 @@
 .banner__container {
   z-index: -1;
 }
-.banner__container img {
+/* .banner__container img {
   width: 100%;
-  height: 70vh;
+  height: 65vh;
   object-fit: cover;
-  object-position: top;
+  
+} */
+
+.banner__background {
+  background-image: url(../assets/images/website-cover.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

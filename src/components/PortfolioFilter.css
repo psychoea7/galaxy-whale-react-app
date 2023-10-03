@@ -1,0 +1,28 @@
+/* PortfolioFilter.css */
+
+/* Styles for filter options container in PortfolioFilter */
+.portfolio__filterOptions {
+    background-color: var(--clr-light-blue);
+    width: 100% !important;
+    margin: 1rem auto !important;
+    border-radius: 0.3vw;
+}
+
+/* Styles for input labels in PortfolioFilter */
+.portfolio__inputLabel {
+    color: var(--clr-white) !important;
+}
+
+/* Styles for the search icon in PortfolioFilter */
+.portfolio__searchIcon {
+    color: var(--clr-dark-blue);
+}
+
+/* Styles for search input labels and text in PortfolioFilter */
+.portfolio__searchInput label {
+    color: var(--clr-white);
+}
+
+.portfolio__searchInput input {
+    color: var(--clr-white);
+}
