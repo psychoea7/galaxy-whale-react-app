@@ -1,18 +1,158 @@
 .banner__container {
-  z-index: -1;
-}
-/* .banner__container img {
-  width: 100%;
-  height: 65vh;
-  object-fit: cover;
-  
-} */
-
-.banner__background {
-  background-image: url(../assets/images/website-cover.png);
+  /* z-index: -1; */
   width: 100%;
   height: 100vh;
-  background-size: cover;
+  position: relative;
+}
+
+.banner__link {
+  text-decoration: none;
+  color: var(--clr-white);
+  text-align: center;
+  transition: all ease 0.3s;
+}
+
+.banner__link:hover {
+  filter: drop-shadow(0 0 5px var(--clr-super-light-blue));
+  transform: scale(1.1);
+}
+
+.banner__stars {
+  background-image: url(../assets/images/stars.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background-position: center;
+  background-size: cover;
+}
+
+.banner__lines {
+  background-image: url(../assets/images/lines.png);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-position: -150px -150px;
+  background-size: cover;
   background-repeat: no-repeat;
+  zoom: 200%;
+}
+
+.banner__sun {
+  background-image: url(../assets/images/sun.png);
+  position: absolute;
+  top: 15%;
+  left: -11%;
+  bottom: 20%;
+  width: 39%;
+  height: 72%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner__linkOne {
+  position: absolute;
+  left: 22%;
+  top: 5%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner__linkOne img {
+  width: 120px;
+  height: 170px;
+}
+
+.banner__linkTwo {
+  position: absolute;
+  left: 29%;
+  bottom: 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner__linkTwo img {
+  width: 120px;
+  height: 170px;
+}
+
+.banner__linkThree {
+  position: absolute;
+  left: 35%;
+  top: 20%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner__linkThree img {
+  width: 150px;
+  height: 190px;
+}
+
+.banner__linkFour {
+  position: absolute;
+  left: 42%;
+  bottom: 12%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner__linkFour img {
+  width: 120px;
+  height: 170px;
+}
+
+.banner__linkFive {
+  position: absolute;
+  left: 48%;
+  top: 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner__linkFive img {
+  width: 150px;
+  height: 190px;
+}
+
+.banner__linkSix {
+  position: absolute;
+  left: 55%;
+  bottom: 17%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner__linkSix img {
+  width: 260px;
+  height: 200px;
+}
+
+.banner__linkSeven {
+  position: absolute;
+  left: 67%;
+  top: 15%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner__linkSeven img {
+  width: 110px;
+  height: 150px;
+}
+
+.banner__linkEight {
+  position: absolute;
+  left: 73%;
+  bottom: 15%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner__linkEight img {
+  width: 110px;
+  height: 150px;
 }
