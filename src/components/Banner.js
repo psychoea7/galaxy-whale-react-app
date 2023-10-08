@@ -14,9 +14,9 @@ import PlanetImageEight from "../assets/images/num8.png";
 function Banner() {
   return (
     <div className="banner__container">
-      <div className="banner__stars"></div>
+      {/* <div className="banner__stars"></div>
       <div className="banner__lines"></div>
-      <div className="banner__sun"></div>
+      <div className="banner__sun"></div> */}
       <Link to="/portfolio/technology" className="banner__link banner__linkOne">
         <p>Marketing</p>
         <img src={PlanetImageOne} alt="Planet 1" />

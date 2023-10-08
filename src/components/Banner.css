@@ -2,6 +2,10 @@
   /* z-index: -1; */
   width: 100%;
   height: 100vh;
+  background-image: url(../assets/images/sun-star-bg.png);
+  background-size: cover;
+  background-position: 0;
+  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -17,7 +21,7 @@
   transform: scale(1.1);
 }
 
-.banner__stars {
+/* .banner__stars {
   background-image: url(../assets/images/stars.png);
   position: absolute;
   top: 0;
@@ -51,50 +55,50 @@
   height: 72%;
   background-size: contain;
   background-repeat: no-repeat;
-}
+} */
 
 .banner__linkOne {
   position: absolute;
-  left: 22%;
+  left: 25%;
   top: 5%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .banner__linkOne img {
-  width: 120px;
-  height: 170px;
+  width: 110px;
+  height: 150px;
 }
 
 .banner__linkTwo {
   position: absolute;
-  left: 29%;
+  left: 36%;
   bottom: 10%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .banner__linkTwo img {
-  width: 120px;
-  height: 170px;
+  width: 110px;
+  height: 150px;
 }
 
 .banner__linkThree {
   position: absolute;
-  left: 35%;
-  top: 20%;
+  left: 41.5%;
+  top: 15%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .banner__linkThree img {
-  width: 150px;
-  height: 190px;
+  width: 180px;
+  height: 230px;
 }
 
 .banner__linkFour {
   position: absolute;
-  left: 42%;
+  left: 52%;
   bottom: 12%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -107,33 +111,33 @@
 
 .banner__linkFive {
   position: absolute;
-  left: 48%;
-  top: 10%;
+  left: 58%;
+  top: 9%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .banner__linkFive img {
-  width: 150px;
-  height: 190px;
+  width: 180px;
+  height: 230px;
 }
 
 .banner__linkSix {
   position: absolute;
-  left: 55%;
-  bottom: 17%;
+  left: 67%;
+  bottom: 15%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .banner__linkSix img {
-  width: 260px;
-  height: 200px;
+  width: 290px;
+  height: 210px;
 }
 
 .banner__linkSeven {
   position: absolute;
-  left: 67%;
+  left: 80%;
   top: 15%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -146,7 +150,7 @@
 
 .banner__linkEight {
   position: absolute;
-  left: 73%;
+  left: 90%;
   bottom: 15%;
   background-size: contain;
   background-repeat: no-repeat;
