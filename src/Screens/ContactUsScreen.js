@@ -29,6 +29,8 @@ function ContactUsScreen() {
         <Grid container spacing={4}>
           {/* First Column: Address, Phone, Email, and Social Media Icons */}
           <Grid item xs={12} md={6} className="contactInfo__container">
+            <div className="contactUsScreen__contactInfoBg">
+
             <Typography mb={5} variant="h5" gutterBottom>
               Contact Information
             </Typography>
@@ -37,13 +39,13 @@ function ContactUsScreen() {
               display="flex"
               my={3}
               alignItems="center"
-            >
+              >
               <Room className="contactInfo__icon" />
               <Link
                 to="/location"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                123 Main St, City, Country
+                className="contactInfo__links"
+                >
+                Qurum, Muscat, Sultanate of Oman
               </Link>
             </Typography>
             <Typography
@@ -51,13 +53,13 @@ function ContactUsScreen() {
               my={3}
               display="flex"
               alignItems="center"
-            >
+              >
               <Phone className="contactInfo__icon" />
               <Link
                 to="/phone"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                +1 (123) 456-7890
+                className="contactInfo__links"
+                >
+                +968 92976223
               </Link>
             </Typography>
             <Typography
@@ -65,39 +67,45 @@ function ContactUsScreen() {
               my={3}
               display="flex"
               alignItems="center"
-            >
+              >
               <Email className="contactInfo__icon" />
               <Link
                 to="/email"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
+                className="contactInfo__links"
+                >
                 example@email.com
               </Link>
             </Typography>
 
             {/* Social Media Icons */}
             <Divider className="contactInfo__divider" />
+
+            <Typography mb={5} variant="h5" gutterBottom>
+              Socials
+            </Typography>
+
             <IconButton
               href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               <Facebook className="contactInfo__socialIcon" />
             </IconButton>
             <IconButton
               href="https://www.twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               <Twitter className="contactInfo__socialIcon" />
             </IconButton>
             <IconButton
               href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               <Instagram className="contactInfo__socialIcon" />
             </IconButton>
+              </div>
           </Grid>
 
           {/* Second Column: Contact Form */}

@@ -99,25 +99,13 @@ function BlogScreen() {
           </AppBar>
         </ElevationScroll>
 
-        <Grid container spacing={3}>
-          {blogPosts.map((post, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <BlogPost
-                title={post.title}
-                date={post.date}
-                content={post.content}
-              />
-            </Grid>
-          ))}
-        </Grid>
-
         {/* New section for most-watched blog post */}
         <Card className="most-watched">
           <div
             className="most-watched__image"
-            style={{
-              backgroundImage: `url('path-to-your-image.jpg')`,
-            }}
+            // style={{
+            //   backgroundImage: `url('../assets/images/sun-star-bg.png')`,
+            // }}
           >
             <Box className="dark-overlay">
               <CardContent className="post-content">
@@ -141,6 +129,18 @@ function BlogScreen() {
           </div>
         </Card>
         {/* End of most-watched blog post section */}
+
+        <Grid container spacing={3}>
+          {blogPosts.map((post, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <BlogPost
+                title={post.title}
+                date={post.date}
+                content={post.content}
+              />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
 
       <Footer />

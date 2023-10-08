@@ -142,7 +142,7 @@ function Footer() {
                 <Room fontSize="small" className="footer__Icon" />
               </ListItemIcon>
               <ListItemText
-                primary="123 Main Street"
+                primary="Qurum, Muscat, Sultanate of Oman"
                 secondary="City, State ZIP"
                 secondaryTypographyProps={{ className: "customSecondaryText" }}
               />
@@ -152,7 +152,7 @@ function Footer() {
                 <Phone fontSize="small" className="footer__Icon" />
               </ListItemIcon>
               <ListItemText
-                primary="(123) 456-7890"
+                primary="+968 92976223"
                 secondary="Phone Number"
                 secondaryTypographyProps={{ className: "customSecondaryText" }}
               />

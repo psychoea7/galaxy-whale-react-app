@@ -3,9 +3,9 @@
 }
 
 .blogScreen__tab.Mui-selected {
-    border-bottom: none !important; /* Remove the border */
-    /* Add any other styles you want for the selected tab */
-  }
+  border-bottom: none !important; /* Remove the border */
+  /* Add any other styles you want for the selected tab */
+}
 
 .Mui-selected {
   color: var(--clr-white) !important;
@@ -18,54 +18,48 @@
 }
 /* Parent container for most-watched section */
 .most-watched {
-    position: relative; /* Ensure proper positioning context */
-    width: 100%; /* Adjust the width as needed */
-    height: 400px; /* Adjust the height as needed */
-  }
-  
+  position: relative; /* Ensure proper positioning context */
+  width: 100%; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+}
+
 /* Overlay for most-watched blog section */
 .dark-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Adjust the opacity as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px; /* Adjust the padding as needed */
-    color: #fff; /* Text color for the overlay */
-  }
-  
-  /* Style for the blog post title */
-  .post-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px; /* Adjust the margin as needed */
-  }
-  
-  /* Style for the preview text */
-  .preview-text {
-    font-size: 16px;
-    margin-bottom: 20px; /* Adjust the margin as needed */
-  }
-  
-  /* Style for the "Continue Reading" button */
-  .continue-reading {
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
-    text-decoration: none; /* Remove underlines from links */
-    padding: 10px 20px; /* Adjust the padding as needed */
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-  
-    /* Hover effect */
-    &:hover {
-      background-color: #0056b3; /* Change the background color on hover */
-    }
-  }
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px; /* Adjust the padding as needed */
+  color: #fff; /* Text color for the overlay */
+}
+
+/* Style for the blog post title */
+.post-title {
+  margin-bottom: 1rem !important; /* Adjust the margin as needed */
+}
+
+/* Style for the preview text */
+.preview-text {
+  margin-bottom: 2rem !important; /* Adjust the margin as needed */
+}
+
+/* Style for the "Continue Reading" button */
+.continue-reading {
+  background-color: var(
+    --clr-dark-blue
+  ) !important; /* Button background color */
+}
+.most-watched__image {
+  background-image: url(../assets/images/laptop.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: 0;
+}

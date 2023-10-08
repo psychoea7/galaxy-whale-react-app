@@ -19,13 +19,13 @@ function LeafletMap() {
     <MapContainer
       attributionControl={false}
       className="contactScreen__map"
-      center={[23.59258402943304, 58.3805206462269]}
+      center={[23.6197637, 58.5011230]}
       zoom={13}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
       {/* Use the custom icon for the Marker */}
-      <Marker position={[23.59258402943304, 58.3805206462269]} icon={customIcon} />
+      <Marker position={[23.6197637, 58.5011230]} icon={customIcon} />
     </MapContainer>
   );
 }

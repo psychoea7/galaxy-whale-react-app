@@ -1,5 +1,5 @@
 .contactForm__container {
-    color: var(--clr-white);
+    /* color: var(--clr-white); */
 }
 
 .contactForm__divider {
@@ -28,6 +28,12 @@
   }
 
   .contactForm__button {
-    background-color: var(--clr-light-blue) !important;
+    background-color: var(--clr-dark-blue) !important;
     color: var(--clr-white) !important;
+  }
+
+  .contactForm__bg {
+    background-color: var(--clr-light-blue);
+    padding: 1.5rem;
+    border-radius: 0.2vw;
   }

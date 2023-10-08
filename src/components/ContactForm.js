@@ -18,10 +18,12 @@ function ContactForm() {
 
   return (
     <div className="contactForm__container">
+      <div className="contactForm__bg">
+
       <Typography variant="h5" gutterBottom>
         Contact Us
       </Typography>
-      <Divider className="contactForm__divider" />
+      {/* <Divider className="contactForm__divider" /> */}
       <form onSubmit={handleSubmit(yourSubmitFunction)}>
         <Controller
           name="email"
@@ -29,12 +31,12 @@ function ContactForm() {
           defaultValue=""
           render={({ field }) => (
             <TextField
-              fullWidth
-              label="Your Email Address"
-              variant="filled"
-              margin="normal"
-              className="contactForm__input"
-              InputLabelProps={{
+            fullWidth
+            label="Your Email Address"
+            variant="filled"
+            margin="normal"
+            className="contactForm__input"
+            InputLabelProps={{
                 classes: {
                   root: 'input-label-color-default', // Add a CSS class for default state
                   focused: 'input-label-color-focus', // Add a CSS class for focused state
@@ -47,25 +49,25 @@ function ContactForm() {
                 style: { color: '#dde6ed' },
               }}
               {...field}
-            />
-          )}
-        />
+              />
+              )}
+              />
         <Controller
           name="subject"
           control={control}
           defaultValue=""
           render={({ field }) => (
             <TextField
-              fullWidth
-              label="Subject"
-              variant="filled"
-              margin="normal"
-              className="contactForm__input"
-              InputLabelProps={{
-                classes: {
-                  root: 'input-label-color-default', // Add a CSS class for default state
-                  focused: 'input-label-color-focus', // Add a CSS class for focused state
-                },
+            fullWidth
+            label="Subject"
+            variant="filled"
+            margin="normal"
+            className="contactForm__input"
+            InputLabelProps={{
+              classes: {
+                root: 'input-label-color-default', // Add a CSS class for default state
+                focused: 'input-label-color-focus', // Add a CSS class for focused state
+              },
               }}
               InputProps={{
                 classes: {
@@ -74,47 +76,48 @@ function ContactForm() {
                 style: { color: '#dde6ed' },
               }}
               {...field}
-            />
-          )}
-        />
+              />
+              )}
+              />
         <Controller
           name="message"
           control={control}
           defaultValue=""
           render={({ field }) => (
             <TextField
-              fullWidth
-              label="Message"
-              multiline
-              rows={4}
-              variant="filled"
-              margin="normal"
-              className="contactForm__input"
-              InputLabelProps={{
-                classes: {
-                  root: 'input-label-color-default', // Add a CSS class for default state
-                  focused: 'input-label-color-focus', // Add a CSS class for focused state
-                },
-              }}
-              InputProps={{
-                classes: {
-                  underline: 'customInputUnderline',
-                },
-                style: { color: '#dde6ed' },
-              }}
-              {...field}
+            fullWidth
+            label="Message"
+            multiline
+            rows={4}
+            variant="filled"
+            margin="normal"
+            className="contactForm__input"
+            InputLabelProps={{
+              classes: {
+                root: 'input-label-color-default', // Add a CSS class for default state
+                focused: 'input-label-color-focus', // Add a CSS class for focused state
+              },
+            }}
+            InputProps={{
+              classes: {
+                underline: 'customInputUnderline',
+              },
+              style: { color: '#dde6ed' },
+            }}
+            {...field}
             />
-          )}
-        />
+            )}
+            />
         <Button
           type="submit"
           variant="contained"
           className="contactForm__button"
           fullWidth
-        >
+          >
           Send Message
         </Button>
       </form>
+          </div>
     </div>
   );
 }

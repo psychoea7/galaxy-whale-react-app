@@ -2,7 +2,7 @@
     margin-top: 6rem;
 }
 .contactInfo__container {
-    color: var(--clr-white);
+    /* color: var(--clr-white); */
 }
 
 .contactInfo__icon {
@@ -17,4 +17,16 @@
 .contactInfo__socialIcon {
     color: var(--clr-super-light-blue) !important;
     font-size: 2rem !important;
+}
+
+.contactUsScreen__contactInfoBg {
+    background-color: var(--clr-light-blue);
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: 0.2vw;
+}
+
+.contactInfo__links {
+    color: var(--clr-white) !important;
+    text-decoration: none;
 }
